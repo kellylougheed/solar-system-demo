@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A-Frame Solar System Lab</title>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img src="stars.jpg" id="stars">
+                <img src="earth.jpg" id="earth">
+                <img src="mars.png" id="mars">
+                <img src="mercury.jpeg" id="mercury">
+                <img src="venus.jpeg" id="venus">
+                <img src="saturn.jpg" id="saturn">
+                <img src="jupiter.jpg" id="jupiter">
+                <img src="sun.jpeg" id="sun">
+            </a-assets>
+            <!--move camera-->
+            <a-entity id="cameraWrapper" position="0 0 20">
+                <a-camera></a-camera>
+            </a-entity>
+            
+            <a-entity>
+                <a-sphere scale="9.5 9.5 9.5" position="0 1 -96" id="Saturn" src="#saturn">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-entity>
+                <a-sphere scale="11.2 11.2 11.2" position="0 1 -52" id="jupiter" src="#jupiter">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                <a-animation attribute="rotation" dur="5500" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-entity>
+                <a-sphere scale=".5 .5 .5" position="0 1 -15" id="Mars" src="#mars">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-entity>
+                <a-sphere scale="1 1 1" position="0 1 -10" id="Earth" src="#earth">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                    <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-entity>
+                <a-sphere scale=".9 .9 .9" position="0 1 -7" id="venus" src="#venus">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-entity position="0 0 0">
+                <a-sphere scale=".4 .4 .4" position="0 1 -4" id="Mercury" src="#mercury">
+                    <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+                </a-sphere>
+                    <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-entity>
+            
+            <a-light type="point" color="" intensity=".55" position="0 0 0"></a-light>
+            
+            <a-sky src="#stars">
+                <a-animation attribute="rotation" dur="52222" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+            </a-sky>
+            
+            <a-sphere scale="3 3 3" position="0 0 0" id="Sun" src="#sun"></a-sphere>
+            <a-entity light="type: ambient; intensity: .55"></a-entity>
+            
+        </a-scene>
+    </body>
+</html>
